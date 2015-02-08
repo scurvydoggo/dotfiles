@@ -31,6 +31,8 @@ set expandtab               " tabs are spaces
 set autoindent              " automagically indent new lines
 
 set incsearch               " search as characters are entered
+set ignorecase              " ignore case when searching
+set smartcase               " case-sensitive if search contains an uppercase char
 
 " Airline plugin
 set laststatus=2            " shows airline immediately
