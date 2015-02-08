@@ -10,10 +10,6 @@ set background=dark
 
 syntax enable               " enable syntax highlighting
 set encoding=utf-8          " set GUI encoding to utf-8
-set guioptions-=m           " remove menu bar
-set guioptions-=T           " remove toolbar
-set guioptions-=r           " remove right-hand scroll bar
-set guioptions-=L           " remove left-hand scroll bar
 set number                  " show line numbers
 set showmatch               " highlight matching [{()}]
 set cursorline              " highlight current line
@@ -21,6 +17,10 @@ if has("gui_running")
     set guifont=Consolas\ for\ Powerline\ FixedD:h10 " set GUI font
     set lines=40                " initial window line count
     set columns=125             " initial window column count
+    set guioptions-=m           " remove menu bar
+    set guioptions-=T           " remove toolbar
+    set guioptions-=r           " remove right-hand scroll bar
+    set guioptions-=L           " remove left-hand scroll bar
 endif
 
 set nowrap
