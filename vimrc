@@ -34,6 +34,16 @@ set incsearch               " search as characters are entered
 set ignorecase              " ignore case when searching
 set smartcase               " case-sensitive if search contains an uppercase char
 
+" Leader commands
+":let mapleader = ","
+" source $MYVIMRC reloads the saved $MYVIMRC 
+:nmap <Leader>v :e $MYVIMRC
+" opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
+:nmap <Leader>s :source $MYVIMRC
+
+" xmllint
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
 " Airline plugin
 set laststatus=2            " shows airline immediately
 set noshowmode              " hide the default mode display
