@@ -34,12 +34,17 @@ set incsearch               " search as characters are entered
 set ignorecase              " ignore case when searching
 set smartcase               " case-sensitive if search contains an uppercase char
 
+set autochdir               " autocatically change CWD to current buffer's directory
+
 " Leader commands
-":let mapleader = ","
-" source $MYVIMRC reloads the saved $MYVIMRC 
-:nmap <Leader>v :e $MYVIMRC
+let mapleader = "\<Space>"
 " opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
-:nmap <Leader>s :source $MYVIMRC
+:nmap <Leader>v :e $MYVIMRC
+" copy/paste to system clipboard using <Leader>p and <Leader>y
+nnoremap <Leader>y "+y
+nnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
 
 " xmllint
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
