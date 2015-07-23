@@ -10,3 +10,6 @@
 [submodule "bundle/hackernews"]
 	path = bundle/hackernews
 	url = https://github.com/ryanss/vim-hackernews
+[submodule "bundle/vim-wakatime"]
+	path = bundle/vim-wakatime
+	url = git://github.com/wakatime/vim-wakatime.git
