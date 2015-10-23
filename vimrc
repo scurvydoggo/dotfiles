@@ -6,7 +6,7 @@ if !has("gui_running")
     let g:gruvbox_italic=0
 endif
 colorscheme gruvbox         " Set colorscheme
-set background=light
+set background=dark
 
 syntax enable               " enable syntax highlighting
 set encoding=utf-8          " set GUI encoding to utf-8
@@ -35,6 +35,9 @@ set ignorecase              " ignore case when searching
 set smartcase               " case-sensitive if search contains an uppercase char
 
 set autochdir               " autocatically change CWD to current buffer's directory
+
+" File-specific indentation
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
 " Leader commands
 let mapleader = "\<Space>"
