@@ -14,13 +14,13 @@ set number                  " show line numbers
 set showmatch               " highlight matching [{()}]
 set cursorline              " highlight current line
 if has("gui_running")
-    set guifont=Consolas\ for\ Powerline\ FixedD:h10 " set GUI font
-    set lines=40                " initial window line count
-    set columns=125             " initial window column count
-    set guioptions-=m           " remove menu bar
-    set guioptions-=T           " remove toolbar
-    set guioptions-=r           " remove right-hand scroll bar
-    set guioptions-=L           " remove left-hand scroll bar
+    set guifont=Menlo\ for\ PowerlineD:h11 " set GUI font
+    set lines=40                           " initial window line count
+    set columns=125                        " initial window column count
+    set guioptions-=m                      " remove menu bar
+    set guioptions-=T                      " remove toolbar
+    set guioptions-=r                      " remove right-hand scroll bar
+    set guioptions-=L                      " remove left-hand scroll bar
 endif
 
 set nowrap
@@ -59,17 +59,7 @@ let g:airline#extensions#tabline#enabled = 1 " show tabs
 
 " Airline plugin: Fancy symbols
 " (Requires custom font to be installed; comment out otherwise)
-if has("gui_running")
-    let g:airline_powerline_fonts = 1
-    let g:airline_symbols = {}
-    let g:airline_left_sep = "\u2b80"
-    let g:airline_left_alt_sep = "\u2b81"
-    let g:airline_right_sep = "\u2b82"
-    let g:airline_right_alt_sep = "\u2b83"
-    let g:airline_symbols.branch = "\u2b60"
-    let g:airline_symbols.readonly = "\u2b64"
-    let g:airline_symbols.linenr = "\u2b61"
-endif
+let g:airline_powerline_fonts = 1
 
 " CtrlP plugin
 let g:ctrlp_max_files = 0 " Set no max file limit
