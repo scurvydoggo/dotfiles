@@ -23,12 +23,13 @@ if has("gui_running")
     set guioptions-=L                      " remove left-hand scroll bar
 endif
 
-set nowrap
 set tabstop=4               " number of visual spaces per TAB
 set softtabstop=4           " number of spaces in tab when editing
 set shiftwidth=4            " number of spaces using the indent operations (<< and >>)
 set expandtab               " tabs are spaces
 set autoindent              " automagically indent new lines
+set wrap                    " Wrap text
+set linebreak               " Wrap text by words
 
 set incsearch               " search as characters are entered
 set ignorecase              " ignore case when searching
