@@ -13,6 +13,7 @@ set encoding=utf-8          " set GUI encoding to utf-8
 set number                  " show line numbers
 set showmatch               " highlight matching [{()}]
 set cursorline              " highlight current line
+set colorcolumn=80          " line length guide
 if has("gui_running")
     set guifont=Menlo\ for\ PowerlineD:h11 " set GUI font
     set lines=40                           " initial window line count
