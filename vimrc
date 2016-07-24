@@ -5,10 +5,10 @@ execute pathogen#infect()
 if !has("gui_running")
     let g:gruvbox_italic=0
 endif
-colorscheme gruvbox         " Set colorscheme
-set background=dark
-
 syntax enable               " enable syntax highlighting
+colorscheme solarized       " Set colorscheme
+set background=light
+
 set encoding=utf-8          " set GUI encoding to utf-8
 set number                  " show line numbers
 set showmatch               " highlight matching [{()}]

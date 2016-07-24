@@ -16,3 +16,6 @@
 [submodule "bundle/scala"]
 	path = bundle/scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
