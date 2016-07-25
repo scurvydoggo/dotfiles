@@ -1,8 +1,9 @@
 execute pathogen#infect()                       
 
 set background=light
+set t_Co=256                                    " force vim to use 256 colors (tmux)
+let g:solarized_termcolors=256                  " use solarized 256 fallback
 colorscheme solarized                           " set colorscheme
-let g:solarized_termtrans=1                     " handle transparency
 syntax enable                                   " enable syntax highlighting
 
 if has("gui_running")
