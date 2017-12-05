@@ -1,10 +1,21 @@
 execute pathogen#infect()                       
 
-set background=light
+syntax enable                                   " enable syntax highlighting
+
+set clipboard=unnamed                           " Use OS clipboard by default
+set mouse=a                                     " Enable mouse scroll
+
+set background=dark
 set t_Co=256                                    " force vim to use 256 colors (tmux)
 let g:solarized_termcolors=256                  " use solarized 256 fallback
+let g:solarized_termtrans=1                     " use solarized 256 fallback
 colorscheme solarized                           " set colorscheme
-syntax enable                                   " enable syntax highlighting
+
+let mapleader = "\<Space>"                      " leader key
+let maplocalleader = "\<Space>"                 " local leader for filetype plugins
+
+filetype on                                     " enable file-specific plugins
+filetype plugin indent on                       " enable file-specific indentation rules
 
 if has("gui_running")
     set guifont=Menlo\ for\ Powerline:h11       " set GUI font
@@ -29,8 +40,6 @@ set autoindent                                  " automagically indent new lines
 set wrap                                        " Wrap text
 set linebreak                                   " Wrap text by words
 
-set clipboard=unnamed                           " Use OS clipboard by default
-
 set incsearch                                   " search as characters are entered
 set ignorecase                                  " ignore case when searching
 set smartcase                                   " case-sensitive if search contains an uppercase char
@@ -40,8 +49,8 @@ set autochdir                                   " automatically change CWD to cu
 " File-specific indentation
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
-let mapleader = "\<Space>"                      " Leader key
 :nmap <Leader>v :e $MYVIMRC                     " opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
+:imap jk <Esc>
 
 set laststatus=2                                " shows airline immediately
 set noshowmode                                  " hide the default mode display
