@@ -67,3 +67,6 @@ set wildignore+=*.log,*.swp,*.tmp
 set wildignore+=*.bmp,*.jpg,*.png,*.gif
 set wildignore+=*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.pdf
 set wildignore+=*/target/*
+
+" Thyme integration
+nmap <leader>t :!thyme -d<cr>                   " start the default Thymer
