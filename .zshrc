@@ -21,3 +21,6 @@ done
 
 # Launch tmux
 if [ -z $TMUX ]; then; exec tmux; fi
+
+# the fuck
+if [ -x $(which thefuck) 2>/dev/null ]; then; eval $(thefuck --alias); fi
