@@ -5,11 +5,20 @@ syntax enable                                   " enable syntax highlighting
 set clipboard=unnamed                           " Use OS clipboard by default
 set mouse=a                                     " Enable mouse scroll
 
-set background=dark
 set t_Co=256                                    " force vim to use 256 colors (tmux)
+set background=dark
+
+colorscheme gruvbox
+
+" Black background
+hi Normal ctermbg=black
+
+" Theme specific: Gruvbox
+let g:gruvbox_contrast="hard"
+
+" Theme specific: Solarized
 let g:solarized_termcolors=256                  " use solarized 256 fallback
 let g:solarized_termtrans=1                     " use solarized 256 fallback
-colorscheme solarized                           " set colorscheme
 
 let mapleader = "\<Space>"                      " leader key
 let maplocalleader = "\<Space>"                 " local leader for filetype plugins
@@ -18,7 +27,7 @@ filetype on                                     " enable file-specific plugins
 filetype plugin indent on                       " enable file-specific indentation rules
 
 if has("gui_running")
-    set guifont=Menlo\ for\ Powerline:h11       " set GUI font
+    set guifont=Fira\ Code:h11                  " set GUI font
     set lines=40                                " initial window line count
     set columns=125                             " initial window column count
     set guioptions-=m                           " remove menu bar
