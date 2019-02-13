@@ -4,7 +4,8 @@ antibody bundle denysdovhan/spaceship-prompt
 
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_RPROMPT_ORDER=dir
+SPACESHIP_CHAR_SYMBOL=⚡
+SPACESHIP_CHAR_SUFFIX=" "
 
 # Move all of the status prompts to the right, leaving only the minimum on the left
 SPACESHIP_RPROMPT_ORDER=(${SPACESHIP_PROMPT_ORDER})
