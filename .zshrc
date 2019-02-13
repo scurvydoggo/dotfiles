@@ -1,6 +1,5 @@
-# Load plugins (antibody must be installed)
-source <(antibody init)
-antibody bundle denysdovhan/spaceship-prompt
+# Load plugins (using antibody static loading approach)
+source ~/.zsh_plugins.sh
 
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
