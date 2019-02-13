@@ -18,3 +18,6 @@ for del in ${SPACESHIP_PROMPT_ORDER[@]} # Remove the left prompt items that are 
 do
   SPACESHIP_RPROMPT_ORDER=("${SPACESHIP_RPROMPT_ORDER[@]/$del}")
 done
+
+# Launch tmux
+if [ -z $TMUX ]; then; exec tmux; fi
