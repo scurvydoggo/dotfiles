@@ -21,6 +21,12 @@ done
 # Coloured ls
 alias ls='ls -G'
 
+# Increase the Ctrl+R history
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
 # the fuck
 if [ -x $(which thefuck) 2>/dev/null ]; then; eval $(thefuck --alias); fi
 
