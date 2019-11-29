@@ -79,3 +79,7 @@ set wildignore+=*/target/*
 
 " Thyme integration
 nmap <leader>t :!thyme -d<cr>                   " start the default Thymer
+
+" netrw
+let g:netrw_liststyle = 3                       " tree-like-view
+let g:netrw_banner = 0                          " remove banner
