@@ -1,4 +1,5 @@
-# Load plugins (using antibody static loading approach)
+# ANDY: Install Antibody: https://getantibody.github.io/install/, then run
+#   antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
 
 SPACESHIP_PROMPT_SEPARATE_LINE=false
@@ -18,6 +19,12 @@ do
   SPACESHIP_RPROMPT_ORDER=("${SPACESHIP_RPROMPT_ORDER[@]/$del}")
 done
 
+# Use vim
+if [ -x "$(command -v vim)" ] ; then
+    export EDITOR=$(which vim)
+    export VISUAL=$(which vim)
+fi
+
 # Coloured ls
 alias ls='ls -G'
 
@@ -28,7 +35,7 @@ SAVEHIST=1000
 setopt appendhistory
 
 # the fuck
-if [ -x $(which thefuck) 2>/dev/null ]; then; eval $(thefuck --alias); fi
+if [ -x "$(command -v thefuck)" ]; then; eval $(thefuck --alias); fi
 
 # Launch tmux
 if [ -z $TMUX ]; then; exec tmux; fi
