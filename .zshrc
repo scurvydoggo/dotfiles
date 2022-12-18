@@ -1,4 +1,4 @@
-# ANDY: Install Antibody: https://getantibody.github.io/install/, then run
+# PREREQUISITE MANUAL STEP: Install Antibody: https://getantibody.github.io/install/, then
 #   antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 source ~/.zsh_plugins.sh
 
@@ -8,19 +8,18 @@ SPACESHIP_CHAR_SYMBOL=⚡
 SPACESHIP_CHAR_SUFFIX=" "
 
 # Move all of the status prompts to the right, leaving only the minimum on the left
-SPACESHIP_RPROMPT_ORDER=(${SPACESHIP_PROMPT_ORDER})
+SPACESHIP_RPROMPT_ORDER=""
 SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory
   exit_code     # Exit code section
   char          # Prompt character
 )
-for del in ${SPACESHIP_PROMPT_ORDER[@]} # Remove the left-side prompt items from the right-side
-do
-  SPACESHIP_RPROMPT_ORDER=("${SPACESHIP_RPROMPT_ORDER[@]/$del}")
-done
+
+# Swap caps/escape key
+if [ -x "$(command -v setxkbmap)" ]; then; setxkbmap -option caps:swapescape; fi
 
 # Use vim
-if [ -x "$(command -v vim)" ] ; then
+if [ -x "$(command -v vim)" ]; then
     export EDITOR=$(which vim)
     export VISUAL=$(which vim)
 fi
@@ -28,7 +27,12 @@ fi
 # Coloured ls
 alias ls='ls -G'
 
-# Increase the Ctrl+R history
+# Git aliases
+#if [ -x "$(command -v git)" ]; then
+#    git config --global alias.lg  'log --all --decorate --oneline --graph'
+#fi
+
+# Increase the zsh Ctrl+R history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
