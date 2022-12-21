@@ -1,0 +1,11 @@
+# Logitech MX 3
+
+# Thumb wheel controls volume
+"xdotool keydown XF86AudioLowerVolume"
+b:6
+"xdotool keyup XF86AudioLowerVolume"
+b:6 + Release
+"xdotool keydown XF86AudioRaiseVolume"
+b:7
+"xdotool keyup XF86AudioRaiseVolume"
+b:7 + Release

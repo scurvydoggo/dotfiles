@@ -12,6 +12,7 @@
 git clone http://github.com/andynygard/dotfiles.git ~/.dotfiles
 ln -s ~/.dotfiles/.thymerc ~/.thymerc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/.xbindkeysrc ~/.xbindkeysrc
 ln -s ~/.dotfiles/.vim ~/.vim
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.zshenv ~/.zshenv
