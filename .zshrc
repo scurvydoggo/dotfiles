@@ -15,22 +15,19 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
+# emacs keymap (e.g ctrl+a and ctrl+e)
+bindkey -e
+
 # Swap caps/escape key
 if [ -x "$(command -v setxkbmap)" ]; then; setxkbmap -option caps:swapescape; fi
-
-# Use vim
-if [ -x "$(command -v vim)" ]; then
-    export EDITOR=$(which vim)
-    export VISUAL=$(which vim)
-fi
 
 # Coloured ls
 alias ls='ls -G'
 
 # Git aliases
-#if [ -x "$(command -v git)" ]; then
-#    git config --global alias.lg  'log --all --decorate --oneline --graph'
-#fi
+if [ -x "$(command -v git)" ]; then
+    git config --global alias.lg  'log --all --decorate --oneline --graph'
+fi
 
 # Increase the zsh Ctrl+R history
 HISTFILE=~/.zsh_history
