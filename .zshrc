@@ -26,7 +26,7 @@ alias ls='ls -G'
 
 # Git aliases
 if [ -x "$(command -v git)" ]; then
-    git config --global alias.lg  'log --all --decorate --oneline --graph'
+    git config --global alias.lg  "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full"
 fi
 
 # Increase the zsh Ctrl+R history
