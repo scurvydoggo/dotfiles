@@ -18,14 +18,12 @@ SPACESHIP_PROMPT_ORDER=(
 # emacs keymap (e.g ctrl+a and ctrl+e)
 bindkey -e
 
-# Swap caps/escape key
-if [ -x "$(command -v setxkbmap)" ]; then; setxkbmap -option caps:swapescape; fi
-
 # Coloured ls
 alias ls='ls -G'
 
-# Git aliases
+# Git config
 if [ -x "$(command -v git)" ]; then
+    git config --global core.editor "vim" 
     git config --global alias.lg  "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full"
 fi
 

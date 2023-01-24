@@ -2,7 +2,7 @@ execute pathogen#infect()
 
 syntax enable                                   " enable syntax highlighting
 
-set clipboard=unnamed                           " Use OS clipboard by default
+set clipboard=unnamedplus                       " Use OS clipboard by default
 set mouse=a                                     " Enable mouse scroll
 
 set t_Co=256                                    " force vim to use 256 colors (tmux)
