@@ -36,5 +36,5 @@ setopt appendhistory
 # the fuck
 if [ -x "$(command -v thefuck)" ]; then; eval $(thefuck --alias); fi
 
-# Launch tmux
-if [ -z $TMUX ]; then; exec tmux; fi
+# Launch tmux if we are in alacritty
+if [ -z "${TMUX}" ] && [ -n "${ALACRITTY_WINDOW_ID}" ]; then; exec tmux; fi
