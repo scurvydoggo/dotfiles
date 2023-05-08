@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/vim-vinegar"]
 	path = .vim/bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule ".vim/bundle/copilot"]
+	path = .vim/bundle/copilot
+	url = https://github.com/github/copilot.vim.git
