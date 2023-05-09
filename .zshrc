@@ -33,6 +33,9 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
+# nvim
+if [ -x "$(command -v nvim)" ]; then; alias vim='nvim'; fi
+
 # the fuck
 if [ -x "$(command -v thefuck)" ]; then; eval $(thefuck --alias); fi
 
