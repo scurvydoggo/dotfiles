@@ -2,6 +2,7 @@
 source ~/.zsh_plugins.sh
 
 # zsh: autocompletion
+fpath+=~/.zfunc
 autoload -Uz compinit bashcompinit && compinit && bashcompinit
 
 SPACESHIP_PROMPT_SEPARATE_LINE=false
