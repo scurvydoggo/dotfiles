@@ -38,6 +38,11 @@ setopt appendhistory
 # nvim
 if [ -x "$(command -v nvim)" ]; then; alias vim='nvim'; fi
 
+# pipx
+if [ -x "$(command -v pipx)" ]; then;
+    eval "$(register-python-argcomplete pipx)"
+fi
+
 # the fuck
 if [ -x "$(command -v thefuck)" ]; then; eval $(thefuck --alias); fi
 
