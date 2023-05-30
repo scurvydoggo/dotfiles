@@ -1,6 +1,8 @@
-# PREREQUISITE MANUAL STEP: Install Antibody: https://getantibody.github.io/install/, then
-#   antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+# PRE-REQUISITE: Run ~/.dotfiles/boostrap
 source ~/.zsh_plugins.sh
+
+# zsh: autocompletion
+autoload -Uz compinit bashcompinit && compinit && bashcompinit
 
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
