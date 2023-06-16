@@ -14,5 +14,6 @@ cd ~/.dotfiles && ./bootstrap
 ## Updating bundles
 
 ```bash
+git submodule foreach git remote set-head origin -a
 git submodule foreach git pull origin HEAD
 ```
