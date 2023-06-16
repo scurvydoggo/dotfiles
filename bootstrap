@@ -18,6 +18,6 @@ ln -s ~/.dotfiles/.zsh_plugins.txt ~/.zsh_plugins.txt
 
 # zsh: plugins
 if [ ! -x "$(command -v antibody)" ] ; then
-    curl -sfL git.io/antibody | sh -s - -b ~/.local/bin
+    curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
 fi
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
