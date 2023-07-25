@@ -2,7 +2,8 @@
 
 ### Prerequisites
 
-- Use `zsh` (not omz)
+- `zsh` (not omz)
+- [FiraCode](https://github.com/tonsky/FiraCode)
 
 ### Steps
 
