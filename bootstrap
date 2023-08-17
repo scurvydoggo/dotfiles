@@ -11,6 +11,7 @@ ln -s ~/.dotfiles/.alacritty.yml ~/.alacritty.yml
 ln -s ~/.dotfiles/.thymerc ~/.thymerc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/.xbindkeysrc ~/.xbindkeysrc
+ln -s ~/.dotfiles/.xprofile ~/.xprofile
 ln -sT ~/.dotfiles/.vim ~/.vim
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.zshenv ~/.zshenv
