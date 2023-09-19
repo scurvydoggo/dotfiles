@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/copilot"]
 	path = .vim/bundle/copilot
 	url = https://github.com/github/copilot.vim.git
+[submodule ".zsh/spaceship"]
+	path = .zsh/spaceship
+	url = https://github.com/spaceship-prompt/spaceship-prompt.git

@@ -7,20 +7,14 @@ git submodule init
 git submodule update
 
 # Symlink the configs
-ln -s ~/.dotfiles/.alacritty.yml ~/.alacritty.yml
-ln -s ~/.dotfiles/.thymerc ~/.thymerc
-ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/.xbindkeysrc ~/.xbindkeysrc
-ln -s ~/.dotfiles/.xprofile ~/.xprofile
-ln -sT ~/.dotfiles/.vim ~/.vim
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.zshenv ~/.zshenv
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.alacritty.yml   ~/.alacritty.yml
+ln -s ~/.dotfiles/.thymerc         ~/.thymerc
+ln -s ~/.dotfiles/.tmux.conf       ~/.tmux.conf
+ln -s ~/.dotfiles/.xbindkeysrc     ~/.xbindkeysrc
+ln -s ~/.dotfiles/.xprofile        ~/.xprofile
+ln -s ~/.dotfiles/.vim             ~/.vim
+ln -s ~/.dotfiles/.vimrc           ~/.vimrc
+ln -s ~/.dotfiles/.zsh             ~/.zsh
+ln -s ~/.dotfiles/.zshenv          ~/.zshenv
+ln -s ~/.dotfiles/.zshrc           ~/.zshrc
 ln -s ~/.dotfiles/.zsh_plugins.txt ~/.zsh_plugins.txt
-
-# zsh: plugins
-if [ ! -x "$(command -v antibody)" ] ; then
-    PATH="$PATH:$HOME/.local/bin"
-    curl -sfL git.io/antibody | sh -s - -b ~/.local/bin
-fi
-antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh

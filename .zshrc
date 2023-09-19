@@ -1,10 +1,9 @@
-# PRE-REQUISITE: Run ~/.dotfiles/boostrap
-source ~/.zsh_plugins.sh
-
 # zsh: autocompletion
 fpath+=~/.zfunc
 autoload -Uz compinit bashcompinit && compinit && bashcompinit
 
+# zsh: spaceship prompt
+source ~/.zsh/spaceship/spaceship.zsh
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL=⚡
