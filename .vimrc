@@ -2,8 +2,8 @@ execute pathogen#infect()
 
 syntax enable                                   " enable syntax highlighting
 
-set clipboard=unnamed                           " Yank to mac/windows clippy
-#set clipboard=unnamedplus                      " Yank to linux
+#set clipboard=unnamed                          " Yank to mac/windows clippy
+set clipboard=unnamedplus                       " Yank to linux
 
 set mouse=a                                     " Enable mouse scroll
 
