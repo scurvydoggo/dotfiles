@@ -51,6 +51,10 @@ if [ -x "$(command -v thefuck)" ]; then; eval $(thefuck --alias); fi
 
 # Launch tmux if we are in terminal/alacritty
 if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
-    ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${ALACRITTY_WINDOW_ID}" ] ); then
+    ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${ALACRITTY_WINDOW_ID}" ] || [ -n "${WAYLAND_DISPLAY}" ]); then
     exec tmux
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
