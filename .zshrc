@@ -23,9 +23,6 @@ SPACESHIP_PROMPT_ORDER=(
 # emacs keymap (e.g ctrl+a and ctrl+e)
 bindkey -e
 
-# Coloured ls
-alias ls='ls -G'
-
 # Git config
 if [ -x "$(command -v git)" ]; then
     git config --global core.editor "vim" 
