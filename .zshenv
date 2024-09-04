@@ -1,2 +1,5 @@
 export PATH="$PATH:$HOME/.local/bin"
-. "$HOME/.cargo/env"
+
+if [ -x "$(command -v cargo)" ]; then;
+    . "$HOME/.cargo/env"
+fi
