@@ -2,15 +2,17 @@ execute pathogen#infect()
 
 syntax enable                                   " enable syntax highlighting
 
-"set clipboard=unnamed                          " Yank to mac/windows clippy
-set clipboard=unnamedplus                       " Yank to linux
+" Yank to linux
+"set clipboard=unnamedplus
+" Yank to mac/windows clippy
+set clipboard=unnamed
 
 set mouse=a                                     " Enable mouse scroll
 
 set t_Co=256                                    " force vim to use 256 colors (tmux)
 set background=dark
 
-colorscheme gruvbox
+colorscheme xcodehc
 
 " Black background
 hi Normal ctermbg=black

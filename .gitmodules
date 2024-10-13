@@ -40,3 +40,6 @@
 [submodule ".zsh/spaceship"]
 	path = .zsh/spaceship
 	url = https://github.com/spaceship-prompt/spaceship-prompt.git
+[submodule ".vim/bundle/vim-colors-xcode"]
+	path = .vim/bundle/vim-colors-xcode
+	url = https://github.com/lunacookies/vim-colors-xcode.git
