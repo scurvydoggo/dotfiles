@@ -2,20 +2,14 @@ execute pathogen#infect()
 
 syntax enable                                   " enable syntax highlighting
 
-" Yank to linux
-"set clipboard=unnamedplus
-" Yank to mac/windows clippy
-set clipboard=unnamed
+"set clipboard=unnamedplus                      " Yank to linux
+set clipboard=unnamed                           " Yank to mac/windows clippy
 
 set mouse=a                                     " Enable mouse scroll
 
 set t_Co=256                                    " force vim to use 256 colors (tmux)
-set background=dark
 
-colorscheme xcodehc
-
-" Black background
-hi Normal ctermbg=black
+colorscheme material
 
 " Theme specific: Gruvbox
 let g:gruvbox_contrast="hard"

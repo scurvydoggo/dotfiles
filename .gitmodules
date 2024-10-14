@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-colors-xcode"]
 	path = .vim/bundle/vim-colors-xcode
 	url = https://github.com/lunacookies/vim-colors-xcode.git
+[submodule ".vim/bundle/material"]
+	path = .vim/bundle/material
+	url = https://github.com/marko-cerovac/material.nvim.git
