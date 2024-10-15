@@ -8,12 +8,10 @@ git submodule update
 
 # Symlink the configs
 ln -s ~/.dotfiles/.alacritty.toml  ~/.alacritty.toml
-ln -s ~/.dotfiles/.thymerc         ~/.thymerc
+ln -s ~/.dotfiles/.config/nvim     ~/.config/nvim
 ln -s ~/.dotfiles/.tmux.conf       ~/.tmux.conf
 ln -s ~/.dotfiles/.xbindkeysrc     ~/.xbindkeysrc
 ln -s ~/.dotfiles/.xprofile        ~/.xprofile
-ln -s ~/.dotfiles/.vim             ~/.vim
-ln -s ~/.dotfiles/.vimrc           ~/.vimrc
 ln -s ~/.dotfiles/.zsh             ~/.zsh
 ln -s ~/.dotfiles/.zshenv          ~/.zshenv
 ln -s ~/.dotfiles/.zshrc           ~/.zshrc
