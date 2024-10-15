@@ -2,8 +2,8 @@
 
 ### Prerequisites
 
-- `zsh` (not omz)
-- [FiraCode](https://github.com/tonsky/FiraCode)
+- `zsh`
+- [Font: Meslo NF](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k)
 
 ### Steps
 
