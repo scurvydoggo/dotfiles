@@ -7,12 +7,13 @@ git submodule init
 git submodule update
 
 # Symlink the configs
-ln -s ~/.dotfiles/.alacritty.toml  ~/.alacritty.toml
-ln -s ~/.dotfiles/.config/nvim     ~/.config/nvim
-ln -s ~/.dotfiles/.tmux.conf       ~/.tmux.conf
-ln -s ~/.dotfiles/.xbindkeysrc     ~/.xbindkeysrc
-ln -s ~/.dotfiles/.xprofile        ~/.xprofile
-ln -s ~/.dotfiles/.zsh             ~/.zsh
-ln -s ~/.dotfiles/.zshenv          ~/.zshenv
-ln -s ~/.dotfiles/.zshrc           ~/.zshrc
-ln -s ~/.dotfiles/.zsh_plugins.txt ~/.zsh_plugins.txt
+mkdir -p ~/.config
+ln -s ~/.dotfiles/.antidote         ~
+ln -s ~/.dotfiles/.config/alacritty ~/.config
+ln -s ~/.dotfiles/.config/nvim      ~/.config
+ln -s ~/.dotfiles/.tmux.conf        ~/.tmux.conf
+ln -s ~/.dotfiles/.xbindkeysrc      ~/.xbindkeysrc
+ln -s ~/.dotfiles/.xprofile         ~/.xprofile
+ln -s ~/.dotfiles/.zsh_plugins.txt  ~/.zsh_plugins.txt
+ln -s ~/.dotfiles/.zshenv           ~/.zshenv
+ln -s ~/.dotfiles/.zshrc            ~/.zshrc
