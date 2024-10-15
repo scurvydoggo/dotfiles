@@ -14,14 +14,18 @@ setopt appendhistory
 
 #### Apps ####
 
-# git
-if [ -x "$(command -v git)" ]; then
-    git config --global core.editor "vim" 
-    git config --global alias.lg  "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full"
-fi
-
 # nvim
 if [ -x "$(command -v nvim)" ]; then; alias vim='nvim'; fi
+
+# git
+if [ -x "$(command -v git)" ]; then
+    if [ -x "$(command -v nvim)" ]; then;
+        git config --global core.editor "nvim";
+    else
+        git config --global core.editor "vim";
+    fi
+    git config --global alias.lg  "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full"
+fi
 
 # pipx
 if [ -x "$(command -v pipx)" ]; then;
