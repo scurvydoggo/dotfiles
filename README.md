@@ -8,7 +8,7 @@
 ### Steps
 
 ```bash
-git clone http://github.com/andynygard/dotfiles.git ~/.dotfiles
+git clone http://github.com/scurvydoggo/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles && ./bootstrap
 ```
 
