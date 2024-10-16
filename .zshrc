@@ -42,6 +42,3 @@ if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
     ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ] || [ -n "${ALACRITTY_WINDOW_ID}" ]); then
     exec tmux
 fi
-
-# p10k
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
