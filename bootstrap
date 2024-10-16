@@ -11,6 +11,7 @@ mkdir -p ~/.config
 ln -s ~/.dotfiles/.antidote         ~
 ln -s ~/.dotfiles/.config/alacritty ~/.config
 ln -s ~/.dotfiles/.config/nvim      ~/.config
+ln -s ~/.dotfiles/.p10k.zsh         ~/.p10k.zsh
 ln -s ~/.dotfiles/.tmux.conf        ~/.tmux.conf
 ln -s ~/.dotfiles/.xbindkeysrc      ~/.xbindkeysrc
 ln -s ~/.dotfiles/.xprofile         ~/.xprofile
