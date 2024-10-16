@@ -32,6 +32,11 @@ if [ -x "$(command -v pipx)" ]; then;
     eval "$(register-python-argcomplete pipx)"
 fi
 
+# fnm
+if [ -x "$(command -v fnm)" ]; then;
+    eval "$(fnm env --use-on-cd --shell zsh)"
+fi
+
 # Launch tmux if we are in terminal/alacritty
 if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
     ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ] || [ -n "${ALACRITTY_WINDOW_ID}" ]); then
