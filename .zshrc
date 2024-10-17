@@ -24,6 +24,7 @@ if [ -x "$(command -v git)" ]; then
     else
         git config --global core.editor "vim";
     fi
+    git config --global core.excludesfile '~/.config/git/ignore'
     git config --global alias.lg  "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full"
 fi
 
