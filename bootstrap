@@ -12,7 +12,7 @@ ln -s ~/.dotfiles/.antidote         ~
 ln -s ~/.dotfiles/.config/alacritty ~/.config
 ln -s ~/.dotfiles/.config/git       ~/.config
 ln -s ~/.dotfiles/.config/nvim      ~/.config
-ln -s ~/.dotfiles/.tmux.conf        ~
+ln -s ~/.dotfiles/.config/tmux      ~/.config
 ln -s ~/.dotfiles/.xbindkeysrc      ~
 ln -s ~/.dotfiles/.xprofile         ~
 ln -s ~/.dotfiles/.zsh_plugins.txt  ~
