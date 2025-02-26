@@ -12,7 +12,6 @@ ln -s  ~/.dotfiles/.antidote                 ~
 ln -s  ~/.dotfiles/.config/alacritty         ~/.config
 ln -s  ~/.dotfiles/.config/git               ~/.config
 ln -s  ~/.dotfiles/.config/nvim              ~/.config
-ln -sF ~/.dotfiles/.config/spicetify/Themes  ~/.config/spicetify
 ln -s  ~/.dotfiles/.config/tmux              ~/.config
 ln -s  ~/.dotfiles/.xbindkeysrc              ~
 ln -s  ~/.dotfiles/.xprofile                 ~
