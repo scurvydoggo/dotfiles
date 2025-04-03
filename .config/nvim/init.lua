@@ -6,7 +6,7 @@ require("config.lazy")
 -------------------
 -- Theme
 -------------------
-vim.g.material_style = 'deep ocean'
+vim.g.material_style = 'lighter'
 vim.cmd 'colorscheme material'
 
 -------------------
