@@ -9,6 +9,7 @@ git submodule update
 # Symlink the configs
 mkdir -p ~/.config
 ln -s  ~/.dotfiles/.antidote                 ~
+ln -s  ~/.dotfiles/.config/ghostty           ~/.config
 ln -s  ~/.dotfiles/.config/git               ~/.config
 ln -s  ~/.dotfiles/.config/nvim              ~/.config
 ln -s  ~/.dotfiles/.config/tmux              ~/.config
