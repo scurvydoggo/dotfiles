@@ -40,6 +40,9 @@ fi
 
 # Launch tmux if we are in terminal/alacritty
 if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
-    ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ] || [ -n "${ALACRITTY_WINDOW_ID}" ]); then
+    ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ] || [ -n "${GHOSTTY_SHELL_FEATURES}" ]); then
     exec tmux
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
