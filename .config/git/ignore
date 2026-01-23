@@ -1,3 +1,5 @@
 .idea/
 .vscode/
 *.xcworkspace/
+
+**/.claude/settings.local.json

@@ -1,1 +1,4 @@
 .config/nvim/lazy-lock.json
+
+# img-clip pastes
+.config/nvim/lua/assets/
