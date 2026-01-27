@@ -26,6 +26,10 @@ vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 
+-- Line numbers
+vim.wo.number = true
+vim.wo.relativenumber = true
+
 ---------------------------------------
 -- Plugins
 ---------------------------------------
