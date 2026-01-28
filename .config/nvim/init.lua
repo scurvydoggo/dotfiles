@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -------------------
 -- Theme
 -------------------
+require('lualine').setup()
 vim.g.material_style = 'lighter'
 vim.cmd 'colorscheme material'
 
@@ -31,9 +32,14 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 ---------------------------------------
--- Lualine
---------------------------------------
-require('lualine').setup()
+-- Modes
+---------------------------------------
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true }) -- Exit terminal mode with Esc
+
+---------------------------------------
+-- Language servers
+---------------------------------------
+vim.lsp.enable('kotlin_lsp')
 
 -------------------
 -- Telescope
@@ -53,8 +59,3 @@ require("oil").setup({
   },
 })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
----------------------------------------
--- Language servers
----------------------------------------
-vim.lsp.enable('kotlin_lsp')
