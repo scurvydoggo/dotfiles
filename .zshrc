@@ -38,9 +38,9 @@ if [ -x "$(command -v fnm)" ]; then;
     eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
-# Launch tmux if we are in terminal/alacritty
+# Launch tmux if we are in a terminal program
 if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
-    ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ] || [ -n "${GHOSTTY_SHELL_FEATURES}" ]); then
+    ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ]); then
     exec tmux
 fi
 
