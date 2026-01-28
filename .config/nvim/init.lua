@@ -40,6 +40,7 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true }) 
 -- Language servers
 ---------------------------------------
 vim.lsp.enable('kotlin_lsp')
+vim.lsp.enable('rust_analyzer')
 
 -------------------
 -- Telescope
