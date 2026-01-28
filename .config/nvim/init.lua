@@ -31,8 +31,8 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 
 ---------------------------------------
--- Plugins
----------------------------------------
+-- Lualine
+--------------------------------------
 require('lualine').setup()
 
 -------------------
@@ -53,3 +53,8 @@ require("oil").setup({
   },
 })
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+---------------------------------------
+-- Language servers
+---------------------------------------
+vim.lsp.enable('kotlin_lsp')
