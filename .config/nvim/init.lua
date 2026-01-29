@@ -39,6 +39,9 @@ vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true }) 
 ---------------------------------------
 -- Language servers
 ---------------------------------------
+require("mason").setup()
+require("mason-lspconfig").setup()
+vim.lsp.enable('bashls')
 vim.lsp.enable('kotlin_lsp')
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('rust_analyzer')
