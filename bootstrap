@@ -15,6 +15,6 @@ ln -s  ~/.dotfiles/.config/tmux              ~/.config
 ln -s  ~/.dotfiles/.config/wezterm           ~/.config
 ln -s  ~/.dotfiles/.xbindkeysrc              ~
 ln -s  ~/.dotfiles/.xprofile                 ~
-ln -s  ~/.dotfiles/.zsh_plugins.txt          ~
-ln -s  ~/.dotfiles/.zshenv                   ~
+ln -s  ~/.dotfiles/.zprofile                 ~
 ln -s  ~/.dotfiles/.zshrc                    ~
+ln -s  ~/.dotfiles/.zsh_plugins.txt          ~
