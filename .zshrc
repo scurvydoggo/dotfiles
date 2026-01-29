@@ -1,3 +1,7 @@
+#####################
+# ZSH
+#####################
+
 source ~/.antidote/antidote.zsh
 antidote load ~/.zsh_plugins.txt
 
@@ -12,10 +16,13 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
-#### Apps ####
+#####################
+# Apps
+#####################
 
-# nvim
-if [ -x "$(command -v nvim)" ]; then; alias vim='nvim'; fi
+###########
+# CLI tools
+###########
 
 # git
 if [ -x "$(command -v git)" ]; then
@@ -28,21 +35,35 @@ if [ -x "$(command -v git)" ]; then
     git config --global alias.lg  "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full"
 fi
 
-# pipx
-if [ -x "$(command -v pipx)" ]; then;
-    eval "$(register-python-argcomplete pipx)"
+# nvim
+if [ -x "$(command -v nvim)" ]; then; alias vim='nvim'; fi
+
+# WezTerm
+if [ -x "$(command -v wezterm)" ]; then;
+    t() {
+        wezterm cli set-tab-title "$*"
+    }
 fi
 
+###########
+# Languages
+###########
+
+# pipx
+if [ -x "$(command -v pipx)" ]; then; eval "$(register-python-argcomplete pipx)"; fi
+
 # fnm
-if [ -x "$(command -v fnm)" ]; then;
-    eval "$(fnm env --use-on-cd --shell zsh)"
-fi
+if [ -x "$(command -v fnm)" ]; then; eval "$(fnm env --use-on-cd --shell zsh)"; fi
 
 # Launch tmux if we are in a terminal program
 if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
     ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ]); then
     exec tmux
 fi
+
+#####################
+# Theme
+#####################
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
