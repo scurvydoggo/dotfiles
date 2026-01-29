@@ -31,6 +31,18 @@ vim.o.shiftwidth = 4
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- LSP warnings / errors
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '|',
+    spacing = 4,
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
 ---------------------------------------
 -- Modes
 ---------------------------------------
@@ -44,6 +56,7 @@ require("mason-lspconfig").setup()
 vim.lsp.enable('bashls')
 vim.lsp.enable('kotlin_lsp')
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('marksman')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('vtsls')
 
