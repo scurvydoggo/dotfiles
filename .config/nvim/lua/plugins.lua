@@ -26,6 +26,17 @@ return {
         },
       }
     },
+    { "folke/neodev.nvim" },
+    {
+      "HakonHarnes/img-clip.nvim",
+       opts = {
+         default = { dir_path = "/tmp/nvim_images" },
+       },
+       event = "VeryLazy",
+       keys = {
+         { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" }
+       },
+    },
     { 'j-hui/fidget.nvim' },
     { 'mason-org/mason-lspconfig.nvim',
       dependencies = {
@@ -37,7 +48,15 @@ return {
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'nvim-treesitter/nvim-treesitter' },
-    { 'stevearc/oil.nvim', dependencies = { "nvim-tree/nvim-web-devicons" } },
+    { 'stevearc/oil.nvim',
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      opts = {
+        view_options = { show_hidden = true },
+      },
+      keys = {
+        { "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
+      },
+    },
     { 'tpope/vim-fugitive' },
     { 'tpope/vim-sleuth' },
     { 'zbirenbaum/copilot.lua',
