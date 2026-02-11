@@ -10,6 +10,7 @@ end
 -------------------
 config.color_scheme = 'Catppuccin Mocha'
 config.font = wez.font_with_fallback({
+  'MesloLGS NF',
   'Fira Code'
 })
 config.initial_rows = 85
