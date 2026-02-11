@@ -16,6 +16,13 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory
 
+# Completions
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+autoload -Uz compinit
+compinit
+
 #####################
 # Apps
 #####################
@@ -24,9 +31,11 @@ setopt appendhistory
 # CLI tools
 ###########
 
+mkdir -p ~/.local/bin
+
 # git
 if [ -x "$(command -v git)" ]; then
-    if [ -x "$(command -v nvim)" ]; then;
+    if [ -x "$(command -v nvim)" ]; then
         git config --global core.editor "nvim";
     else
         git config --global core.editor "vim";
@@ -36,13 +45,18 @@ if [ -x "$(command -v git)" ]; then
 fi
 
 # nvim
-if [ -x "$(command -v nvim)" ]; then; alias vim='nvim'; fi
+if [ -x "$(command -v nvim)" ]; then alias vim='nvim'; fi
 
 # WezTerm
-if [ -x "$(command -v wezterm)" ]; then;
+if [ -x "$(command -v wezterm)" ]; then
     t() {
         wezterm cli set-tab-title "$*"
     }
+fi
+
+# podman
+if [ -x "$(command -v podman)" ] && [ ! -x "$(command -v docker)" ]; then
+    ln -s $(which podman) ~/.local/bin/docker
 fi
 
 ###########
@@ -50,10 +64,10 @@ fi
 ###########
 
 # pipx
-if [ -x "$(command -v pipx)" ]; then; eval "$(register-python-argcomplete pipx)"; fi
+if [ -x "$(command -v pipx)" ]; then eval "$(register-python-argcomplete pipx)"; fi
 
 # fnm
-if [ -x "$(command -v fnm)" ]; then; eval "$(fnm env --use-on-cd --shell zsh)"; fi
+if [ -x "$(command -v fnm)" ]; then eval "$(fnm env --use-on-cd --shell zsh)"; fi
 
 # Launch tmux if we are in a terminal program
 if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
