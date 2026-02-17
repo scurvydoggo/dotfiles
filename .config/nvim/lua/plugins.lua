@@ -46,7 +46,16 @@ return {
     },
     { 'marko-cerovac/material.nvim' },
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
-    { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-telescope/telescope.nvim',
+      dependencies = { 'nvim-lua/plenary.nvim' },
+      opts = {
+        defaults = {
+          path_display = {
+            "filename_first"
+          },
+        }
+      }
+    },
     { 'nvim-treesitter/nvim-treesitter' },
     { 'stevearc/oil.nvim',
       dependencies = { "nvim-tree/nvim-web-devicons" },
