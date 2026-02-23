@@ -37,9 +37,6 @@ config.keys = {
   { key = 's', mods = 'LEADER', action = wez.action.PaneSelect { mode = 'SwapWithActiveKeepFocus' } },
   -- Rotate Panes
   { key = 'r', mods = 'LEADER', action = wez.action.RotatePanes 'Clockwise' },
-  -- Resize Panes
-  { key = 'h', mods = 'LEADER', action = wez.action.AdjustPaneSize { 'Left', 5 } },
-  { key = 'l', mods = 'LEADER', action = wez.action.AdjustPaneSize { 'Right', 5 } },
 }
 
 return config
