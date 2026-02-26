@@ -35,13 +35,21 @@ mkdir -p ~/.local/bin
 
 # git
 if [ -x "$(command -v git)" ]; then
+    # Editor
     if [ -x "$(command -v nvim)" ]; then
         git config --global core.editor "nvim";
     else
         git config --global core.editor "vim";
     fi
+
+    # Global gitignore
     git config --global core.excludesfile '~/.config/git/ignore'
+
+    # Pretty log
     git config --global alias.lg  "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full"
+
+    # Worktree creation
+    git config --global alias.wta '!f() { git worktree add -b "$1" "worktrees/$1"; }; f'
 fi
 
 # nvim
