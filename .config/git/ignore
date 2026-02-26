@@ -1,5 +1,9 @@
-.idea/
+# git worktree - see 'git wta' alias
+worktrees/
+
+# IDEs
 .vscode/
 *.xcworkspace/
 
+# AI
 **/.claude/settings.local.json
