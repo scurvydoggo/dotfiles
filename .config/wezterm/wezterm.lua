@@ -23,7 +23,7 @@ config.scrollback_lines = 10000
 -------------------
 -- Keys
 -------------------
-config.leader = {key='a', mods='CTRL', timeout_milliseconds=1000}
+config.leader = {key='Space', mods='CTRL', timeout_milliseconds=1000}
 config.keys = {
   -- Split Panes
   { key = '|', mods = 'LEADER|SHIFT', action = wez.action.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
