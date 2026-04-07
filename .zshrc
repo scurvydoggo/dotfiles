@@ -49,7 +49,8 @@ fi
 if [ -x "$(command -v nvim)" ]; then alias vim='nvim'; fi
 
 # WezTerm
-if [ -x "$(command -v wezterm)" ]; then
+if [ "$TERM_PROGRAM" = "WezTerm" ]; then
+    # Press 't' to set pane title
     t() {
         wezterm cli set-tab-title "$*"
     }
@@ -70,8 +71,8 @@ if [ -x "$(command -v pipx)" ]; then eval "$(register-python-argcomplete pipx)";
 # fnm
 if [ -x "$(command -v fnm)" ]; then eval "$(fnm env --use-on-cd --shell zsh)"; fi
 
-# Launch tmux if we are in a terminal program
-if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && \
+# Launch tmux (unless WezTerm - own panes)
+if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && [ "$TERM_PROGRAM" != "WezTerm" ] && \
     ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ]); then
     exec tmux
 fi
