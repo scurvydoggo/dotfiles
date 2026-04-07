@@ -57,10 +57,10 @@ if [ -x "$(command -v nvim)" ]; then alias vim='nvim'; fi
 
 # WezTerm
 if [ "$TERM_PROGRAM" = "WezTerm" ]; then
+    if [ -n "$WSL_DISTRO_NAME" ]; then wezterm() { wezterm.exe "$@"; }; fi
+
     # Press 't' to set pane title
-    t() {
-        wezterm cli set-tab-title "$*"
-    }
+    t() { wezterm cli set-tab-title "$*" }                                 
 fi
 
 # podman
