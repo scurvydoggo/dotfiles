@@ -68,3 +68,24 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-------------------
+-- Neovide
+-------------------
+if vim.g.neovide then
+  vim.g.neovide_input_use_logo = 1
+  vim.g.neovide_scale_factor = 1.0
+
+  local function zoom(delta)
+    return function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + delta end
+  end
+  local function reset_zoom() vim.g.neovide_scale_factor = 1.0 end
+
+  local mod = vim.fn.has('mac') == 1 and 'D' or 'C'
+  local function key(k) return '<' .. mod .. '-' .. k .. '>' end
+
+  vim.keymap.set('n', key('='), zoom(0.2),  { desc = 'Neovide: zoom in' })
+  vim.keymap.set('n', key('+'), zoom(0.2),  { desc = 'Neovide: zoom in' })
+  vim.keymap.set('n', key('-'), zoom(-0.2), { desc = 'Neovide: zoom out' })
+  vim.keymap.set('n', key('0'), reset_zoom, { desc = 'Neovide: reset zoom' })
+end
