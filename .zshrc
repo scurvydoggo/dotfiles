@@ -71,7 +71,7 @@ if [ -x "$(command -v pipx)" ]; then eval "$(register-python-argcomplete pipx)";
 # fnm
 if [ -x "$(command -v fnm)" ]; then eval "$(fnm env --use-on-cd --shell zsh)"; fi
 
-# Launch tmux (unless WezTerm - own panes)
+# Launch tmux
 if [ -x "$(command -v tmux)" ] && [ -z "${TMUX}" ] && [ "$TERM_PROGRAM" != "WezTerm" ] && \
     ( [ -n "${GNOME_TERMINAL_SCREEN}" ] || [ -n "${WAYLAND_DISPLAY}" ]); then
     exec tmux

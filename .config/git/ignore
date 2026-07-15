@@ -3,6 +3,8 @@
 *.xcworkspace/
 
 # AI
+.aider*
+!.aider.conf.yml
 **/.claude/settings.local.json
 
 # Mac
