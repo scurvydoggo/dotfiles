@@ -50,6 +50,7 @@ if [ -x "$(command -v git)" ]; then
 
     # Worktree creation
     git config --global alias.wta '!f() { git worktree add -b "$1" "worktrees/$1"; }; f'
+    git config --global alias.wte '!f() { git worktree add "worktrees/$1" "$1"; }; f' # Existing branch
 fi
 
 # nvim
