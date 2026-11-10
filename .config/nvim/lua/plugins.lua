@@ -26,7 +26,27 @@ return {
         },
       }
     },
-    { "folke/neodev.nvim" },
+    { 'alex35mil/pi.nvim',
+      cmd = { "Pi", "PiToggleChat", "PiContinue", "PiResume" },
+      keys = {
+        { "<leader>pp", "<cmd>Pi layout=side<cr>", desc = "Pi side", mode = { "n", "v" } },
+        { "<leader>pf", "<cmd>Pi layout=float<cr>", desc = "Pi float", mode = { "n", "v" } },
+        { "<leader>pl", "<cmd>PiToggleLayout<cr>", desc = "Pi toggle layout", mode = { "n", "v" } },
+        { "<leader>pc", "<cmd>PiContinue<cr>", desc = "Pi continue last session", mode = { "n", "v" } },
+        { "<leader>pr", "<cmd>PiResume<cr>", desc = "Pi resume past session", mode = { "n", "v" } },
+        { "<leader>pm", "<cmd>PiSendMention<cr>", desc = "Pi mention file/selection", mode = { "n", "v" } },
+        { "<leader>pa", "<cmd>PiAttention<cr>", desc = "Pi open next attention request", mode = { "n", "v" } },
+      },
+      opts = {
+        layout = {
+          side = {
+            position = "right",
+            width = 50,
+          },
+        },
+      },
+    },
+    { 'folke/neodev.nvim' },
     {
       "HakonHarnes/img-clip.nvim",
        opts = {
